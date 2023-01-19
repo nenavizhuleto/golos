@@ -114,7 +114,8 @@
 		}, (data) => {
 			let html = '';
 			for (let i in data.rows) {
-				html += '<option value="' + data.rows[i].id + '">' + data.rows[i].num + '</option>';
+				const block_name = data.rows[i].name ? data.rows[i].name : "Двор"
+				html += '<option value="' + data.rows[i].id + '">' + "№" + data.rows[i].num + " " + block_name +'</option>';
 			}
 
 			block_id_element.append(html);
@@ -197,6 +198,8 @@
 	function buildingsBuildingFormValidate() {
 		let num = parseInt($('#buildings-building-form-num').val());
 		let ok = true;
+
+		console.log(num)
 
 		if (!num || num <= 0)
 			ok = false;

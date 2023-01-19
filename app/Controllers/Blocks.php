@@ -94,7 +94,6 @@ class Blocks extends BaseController {
     return json_encode($result);
   }
 
-  /*
   function postDelete() {
   	// ACL
     $userModel = model('App\Models\UserModel');
@@ -117,20 +116,19 @@ class Blocks extends BaseController {
     	$id = (int)$id;
 
    	//
-    $streetModel = model('App\Models\StreetModel');
+    $blockModel = model('App\Models\BlockModel');
   	$result = [
   		'result' => false
   	];
 
   	try {
-  		$streetModel->delete($ids);
+  		$blockModel->delete($ids);
 			$result['result'] = true;
 			$result['message'] = 'Удалено.';
 		} catch (\Exception $e) {
-			$result['message'] = 'Ошибка: некоторые улицы содержат дома.';
+			$result['message'] = 'Ошибка: некоторые дворы содержат дома.';
 		}
 
     return json_encode($result);
   }
-  */
 }

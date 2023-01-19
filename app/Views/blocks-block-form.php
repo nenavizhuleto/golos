@@ -38,8 +38,12 @@
 	function blocksBlockFormReset(callback = null) {
 		$('#blocks-block-form').data('id', null);
 
+		$('#blocks-block-form-num').val('');
+		$('#blocks-block-form-name').val('');
+
 		// buildingsBuildingFormGetStreets(null, callback);
-		callback();
+		if (callback instanceof Function)
+				callback();
 	}
 
 	function blocksBlockFormLoad(id, callback = null) {

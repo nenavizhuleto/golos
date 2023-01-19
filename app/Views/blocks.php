@@ -21,8 +21,8 @@
 	}
 
 	function blocksToolbarDeleteButtonOnClick() {
-		new XuToast(toastContainer, { classes: ['text-bg-primary'], text: 'Удаление дворов временно недоступно.', timeout: 8000 });
-		return;
+		// new XuToast(toastContainer, { classes: ['text-bg-primary'], text: 'Удаление дворов временно недоступно.', timeout: 8000 });
+		// return;
 		let keys = blocksTable.getCheckedKeys();
 		if (keys.length < 1)
 			return;
